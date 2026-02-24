@@ -1,6 +1,6 @@
 {
   "generators": {
-    "address": 3,
+    "address": 4,
     "nonce": 0
   },
   "auth": [
@@ -367,7 +367,7 @@
                 "bytes": "0000000000000000000000000000000000000000000000000000000000000001"
               },
               {
-                "symbol": "configure_services"
+                "symbol": "submit_attestation_tracked"
               }
             ],
             "data": {
@@ -376,7 +376,16 @@
                   "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M"
                 },
                 {
-                  "vec": []
+                  "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4"
+                },
+                {
+                  "u64": 0
+                },
+                {
+                  "bytes": "0101010101010101010101010101010101010101010101010101010101010101"
+                },
+                {
+                  "bytes": ""
                 }
               ]
             }
@@ -397,12 +406,12 @@
                 "symbol": "fn_return"
               },
               {
-                "symbol": "configure_services"
+                "symbol": "submit_attestation_tracked"
               }
             ],
             "data": {
               "error": {
-                "contract": 12
+                "contract": 7
               }
             }
           }
@@ -423,7 +432,7 @@
               },
               {
                 "error": {
-                  "contract": 12
+                  "contract": 7
                 }
               }
             ],
@@ -448,17 +457,17 @@
               },
               {
                 "error": {
-                  "contract": 12
+                  "contract": 7
                 }
               }
             ],
             "data": {
               "vec": [
                 {
-                  "string": "contract try_call failed"
+                  "string": "contract call failed"
                 },
                 {
-                  "symbol": "configure_services"
+                  "symbol": "submit_attestation_tracked"
                 },
                 {
                   "vec": [
@@ -466,11 +475,45 @@
                       "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHK3M"
                     },
                     {
-                      "vec": []
+                      "address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAITA4"
+                    },
+                    {
+                      "u64": 0
+                    },
+                    {
+                      "bytes": "0101010101010101010101010101010101010101010101010101010101010101"
+                    },
+                    {
+                      "bytes": ""
                     }
                   ]
                 }
               ]
+            }
+          }
+        }
+      },
+      "failed_call": false
+    },
+    {
+      "event": {
+        "ext": "v0",
+        "contract_id": null,
+        "type_": "diagnostic",
+        "body": {
+          "v0": {
+            "topics": [
+              {
+                "symbol": "error"
+              },
+              {
+                "error": {
+                  "contract": 7
+                }
+              }
+            ],
+            "data": {
+              "string": "escalating error to panic"
             }
           }
         }
